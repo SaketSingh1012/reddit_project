@@ -4,7 +4,7 @@ function findTop3EngagedTopics(votes, posts) {
   posts.forEach((post) => {
     const postId = post.id;
     const postVotes = votes.filter((vote) => vote.postId === postId);
-    const topicId = post.topicId;
+    const { topicId } = post;
 
     if (!topicEngagement[topicId]) {
       topicEngagement[topicId] = 0;
@@ -16,7 +16,7 @@ function findTop3EngagedTopics(votes, posts) {
   });
 
   const sortedTopics = Object.keys(topicEngagement).sort(
-    (a, b) => topicEngagement[b] - topicEngagement[a]
+    (a, b) => topicEngagement[b] - topicEngagement[a],
   );
 
   const top3Topics = sortedTopics.slice(0, 3);

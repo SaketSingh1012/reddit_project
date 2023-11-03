@@ -1,18 +1,18 @@
-function findTop5UsersWithMostPosts(posts, users) {
+function findTop5UsersWithMostPosts(posts) {
   const userPostCounts = {};
 
   posts.forEach((post) => {
-    const userId = post.userId;
+    const { userId } = post;
 
     if (userPostCounts[userId] === undefined) {
       userPostCounts[userId] = 1;
     } else {
-      userPostCounts[userId]++;
+      userPostCounts[userId] += 1;
     }
   });
 
   const sortedUsers = Object.keys(userPostCounts).sort(
-    (a, b) => userPostCounts[b] - userPostCounts[a]
+    (a, b) => userPostCounts[b] - userPostCounts[a],
   );
 
   const top5Users = sortedUsers.slice(0, 5);
