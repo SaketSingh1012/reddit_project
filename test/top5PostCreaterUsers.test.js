@@ -1,3 +1,5 @@
+/* global test, expect */
+
 const findTop5UsersWithMostPosts = require('../server/top5PostCreaterUsers');
 
 const postData = [

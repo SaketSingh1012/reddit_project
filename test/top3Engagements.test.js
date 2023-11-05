@@ -1,4 +1,4 @@
-const findTop3EngagedTopics = require('../server/top3Engagements');
+/* global test, expect */const findTop3EngagedTopics = require('../server/top3Engagements');
 
 const voteData = [
   { type: 'up', postId: 'post-1' },

@@ -1,3 +1,5 @@
+/* global test, expect */
+
 const findTop5MostActiveUsers = require('../server/top5ActiveUsers');
 
 const postData = [

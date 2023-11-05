@@ -1,4 +1,6 @@
-const findTop3PostsWithHighestScore = require('../server/findTop3PostsWithVotes'); // Replace with the actual filename
+/* global test, expect */
+
+const findTop3PostsWithHighestScore = require('../server/findTop3PostsWithVotes');
 
 const voteData = [
   { postId: 'post-1', type: 'up' },

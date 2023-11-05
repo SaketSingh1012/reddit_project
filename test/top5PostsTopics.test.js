@@ -1,3 +1,5 @@
+/* global test, expect */
+
 const findTop5TopicsWithMostPosts = require('../server/top5PostsTopics');
 
 const postData = [
